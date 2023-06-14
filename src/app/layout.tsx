@@ -1,4 +1,4 @@
-import React, { JSX } from 'react';
+import React, { FC } from 'react';
 import { Poppins } from 'next/font/google';
 import { Metadata } from 'next';
 import './globals.css';
@@ -17,7 +17,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const RootLayout = ({ children }: Props): JSX.Element => {
+const RootLayout: FC<Props> = ({ children }) => {
   return (
     <html lang="en" className="w-full h-full bg-zinc-200">
       <body className={`${inter.className} w-full h-full`}>{children}</body>
