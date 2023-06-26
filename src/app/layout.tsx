@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { Poppins } from 'next/font/google';
 import { Metadata } from 'next';
 import './globals.css';
+import MainLayout from '@/components/Layout';
 
 const inter = Poppins({
   subsets: ['latin'],
@@ -20,7 +21,9 @@ type Props = {
 const RootLayout: FC<Props> = ({ children }) => {
   return (
     <html lang="en" className="w-full h-full bg-zinc-200">
-      <body className={`${inter.className} w-full h-full`}>{children}</body>
+      <body className={`${inter.className} w-full h-full`}>
+        <MainLayout>{children}</MainLayout>
+      </body>
     </html>
   );
 };

@@ -1,26 +1,25 @@
 import React, { FC } from 'react';
+import Link from 'next/link';
 import NavigationBar from '@/components/Navigation';
 import HomeHeading from '@/components/Heading';
 import PostCard from '@/components/Post/PostCard';
 import { posts } from 'mock/post';
-import Footer from '@/components/Footer';
 
 const Home: FC = () => {
   return (
-    <div className="w-full h-full pt-11">
-      <div className="container mx-auto w-3/4">
-        <NavigationBar />
-      </div>
-      <div className="flex container justify-center mx-auto pt-10 pb-20 w-3/4">
+    <>
+      <NavigationBar />
+      <div className="flex justify-center pt-10 pb-20">
         <HomeHeading />
       </div>
-      <div className="grid md:grid-cols-3 gap-5 container mx-auto w-3/4 py-20">
+      <div className="grid md:grid-cols-3 gap-5 py-20">
         {posts.map((post) => (
-          <PostCard key={post.id} post={post} />
+          <Link key={post.id} href={`/posts/${post.id}`}>
+            <PostCard post={post} />
+          </Link>
         ))}
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 
