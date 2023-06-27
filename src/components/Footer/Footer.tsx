@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="border border-zinc-300 rounded" />
       <div className="flex justify-between items-center py-7">
         <div>
-          <p>© 2023 Georgi Dimitrov</p>
+          <p className="text-slate-500">© 2023 Georgi Dimitrov</p>
         </div>
         <div className="flex items-center">
           <Link href="/">

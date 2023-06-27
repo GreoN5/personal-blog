@@ -12,7 +12,10 @@ const Home: FC = () => {
       <div className="flex justify-center pt-10 pb-20">
         <HomeHeading />
       </div>
-      <div className="grid md:grid-cols-3 gap-5 py-20">
+      <div>
+        <h2 className="font-semibold">Recent posts:</h2>
+      </div>
+      <div className="grid md:grid-cols-3 gap-5 pb-20 pt-5">
         {posts.map((post) => (
           <Link key={post.id} href={`/posts/${post.id}`}>
             <PostCard post={post} />
