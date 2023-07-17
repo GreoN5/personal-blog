@@ -13,7 +13,7 @@ const PostPage: FC = () => {
   return (
     <>
       <NavigationBar />
-      <div className="bg-slate-100 px-20 pb-1 pt-16 mt-5 h-full">
+      <div className="bg-slate-100 px-20 py-16 mt-5 h-full">
         <h1 className="mb-1 font-semibold">{post?.title}</h1>
         <div className="mb-5">
           <span className="mr-1 text-slate-500">{post?.category}</span>

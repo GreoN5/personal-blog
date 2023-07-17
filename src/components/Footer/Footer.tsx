@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Link from 'next/link';
 import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <div className="container mx-auto w-3/4 pt-10">
       <div className="border border-zinc-300 rounded" />

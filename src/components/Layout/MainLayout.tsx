@@ -7,8 +7,10 @@ type Props = {
 
 const MainLayout: FC<Props> = ({ children }) => {
   return (
-    <div className="flex flex-col justify-between w-full h-full pt-11">
-      <div className="container mx-auto w-3/4">{children}</div>
+    <div>
+      <div className="flex flex-col justify-between w-full h-full py-11">
+        <div className="container mx-auto w-3/4">{children}</div>
+      </div>
       <Footer />
     </div>
   );
