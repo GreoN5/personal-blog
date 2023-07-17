@@ -15,7 +15,7 @@ const Home: FC = () => {
       <div>
         <h2 className="font-semibold">Recent posts:</h2>
       </div>
-      <div className="grid md:grid-cols-3 gap-5 pb-20 pt-5">
+      <div className="grid lg:grid-cols-3 gap-5 pb-20 pt-5">
         {posts.map((post) => (
           <Link key={post.id} href={`/posts/${post.id}`}>
             <PostCard post={post} />
