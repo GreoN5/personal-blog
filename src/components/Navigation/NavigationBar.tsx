@@ -24,17 +24,21 @@ const NavigationBar: FC = () => {
         <SearchInput />
       </div>
       <div
-        className={`w-full block flex-grow md:flex flex-1 md:justify-end ${
-          isOpen ? 'absolute flex flex-col mt-10 ml-4' : 'hidden'
+        className={`sm:w-auto md:w-full block flex-grow md:flex flex-1 md:justify-end bg-white ${
+          isOpen
+            ? 'absolute w-1/2 rounded-lg shadow-md shadow-stone-400 left-0 flex items-center flex-col mt-12 ml-4'
+            : 'hidden'
         }`}
       >
-        <Link href="/" className="mr-5">
+        <Link href="/" className="p-5 md:mr-5 md:p-0">
           Home
         </Link>
-        <Link href="/" className="mr-5">
+        <Link href="/" className="p-5 md:mr-5 md:p-0">
           About
         </Link>
-        <Link href="/">Contact</Link>
+        <Link href="/" className="p-5 md:p-0">
+          Contact
+        </Link>
       </div>
     </nav>
   );
