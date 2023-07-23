@@ -3,34 +3,34 @@
 @tailwind utilities;
 
 h1 {
-  @apply text-3xl;
+    @apply text-3xl;
 }
 
 h2 {
-  @apply text-2xl;
+    @apply text-2xl;
 }
 
 h3 {
-  @apply text-xl;
+    @apply text-xl;
 }
 
 h4 {
-  @apply text-lg;
+    @apply text-lg;
 }
 
 @tailwind components;
 @tailwind utilities;
 
 input[type='search']::-ms-clear {
-  display: none;
-  width: 0;
-  height: 0;
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 input[type='search']::-ms-reveal {
-  display: none;
-  width: 0;
-  height: 0;
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 /* clears the 'X' from Chrome */
@@ -38,9 +38,13 @@ input[type='search']::-webkit-search-decoration,
 input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-results-button,
 input[type='search']::-webkit-search-results-decoration {
-  display: none;
+    display: none;
 }
 
 .icon {
-  @apply text-zinc-400;
+    @apply text-zinc-400;
+}
+
+.icon-bold {
+    @apply font-extrabold;
 }

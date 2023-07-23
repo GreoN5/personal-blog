@@ -1,16 +1,16 @@
 'use client';
 
 import React, { FC, useState } from 'react';
-import Link from 'next/link';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdClose } from 'react-icons/md';
 import SearchInput from './SearchInput';
+import Links from './Links';
 
 const NavigationBar: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <nav className="w-full h-auto md:bg-white flex flex-col sm:flex-row justify-between items-center md:px-5 md:py-5">
+    <nav className="w-full h-auto md:bg-white flex flex-col sm:flex-row justify-between items-center md:px-5 md:py-5 mb-5 md:mb-7 lg:mb-10 rounded-md">
       <div className="flex items-center">
         <div className="block absolute left-0 md:hidden">
           <button
@@ -30,15 +30,7 @@ const NavigationBar: FC = () => {
             : 'hidden'
         }`}
       >
-        <Link href="/" className="p-5 md:mr-5 md:p-0">
-          Home
-        </Link>
-        <Link href="/" className="p-5 md:mr-5 md:p-0">
-          About
-        </Link>
-        <Link href="/" className="p-5 md:p-0">
-          Contact
-        </Link>
+        <Links />
       </div>
     </nav>
   );
