@@ -1,13 +1,27 @@
-import React, { FC } from 'react';
+'use client';
+
+import React, { FC, useState } from 'react';
 
 const ContactPage: FC = () => {
+  const [messageSent, setMessageSent] = useState<any>();
+
+  const onSubmit = (e): void => {
+    e.preventDefault();
+    
+    fetch(
+      'https://cms-evalue-test-ac976666bf1a.herokuapp.com/api/email-sender/652ebc173e84d2c547c36bf6',
+      {
+        method: 'POST',
+      },
+    )
+      .then((res) => res.json())
+      .then((data) => setMessageSent(data))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <div className="bg-white px-20 py-16 mt-5 h-full rounded-md">
-      <form
-        action="https://cms-evalue-test-ac976666bf1a.herokuapp.com/api/email-sender/652ebc173e84d2c547c36bf6"
-        method="POST"
-        className="flex flex-col"
-      >
+      <form onSubmit={onSubmit} className="flex flex-col">
         <h1>Send email</h1>
         <div className="my-3 flex flex-col">
           <label htmlFor="sender">Sender</label>
@@ -29,6 +43,7 @@ const ContactPage: FC = () => {
         <input type="hidden" name="origin" value="https://personal-blog-alpha-eight.vercel.app/" />
         <input type="submit" value="Submit" />
       </form>
+      <div className="my-5 font-bold text-xl accent-green-800">{messageSent?.message}</div>
     </div>
   );
 };
