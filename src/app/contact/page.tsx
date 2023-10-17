@@ -5,9 +5,9 @@ import React, { FC, useState } from 'react';
 const ContactPage: FC = () => {
   const [messageSent, setMessageSent] = useState<any>();
 
-  const onSubmit = (e): void => {
+  const onSubmit = (e: any): void => {
     e.preventDefault();
-    
+
     fetch(
       'https://cms-evalue-test-ac976666bf1a.herokuapp.com/api/email-sender/652ebc173e84d2c547c36bf6',
       {
